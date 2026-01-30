@@ -60,10 +60,10 @@ public_users.get('/isbn/:isbn',function (req, res) {
             }
 
             reject(new Error("Book is not found"));
-        })
-            .then(data => res.status(200).send(JSON.stringify(data, null, 4)))
-            .catch(error => res.status(500).json(error));
-    });
+        }, 0);
+    })
+        .then(data => res.status(200).send(JSON.stringify(data, null, 4)))
+        .catch(error => res.status(500).json(error));
  });
   
 // Get book details based on author
