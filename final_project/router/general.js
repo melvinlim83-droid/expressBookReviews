@@ -62,7 +62,7 @@ public_users.get('/isbn/:isbn',function (req, res) {
             reject(new Error("Book is not found"));
         }, 0);
     })
-    promise.then(data => res.status(200).json(data)
+    promise.then(data => res.status(200).json(data))
         .catch(error => res.status(404).json({message: `Cannot find ISBN ${isbn}`, error: error.message}));
  });
   
